@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/collinsjumaz/bookstore/issues"
   },
-  "homepage": "https://github.com/collinsjumaz/bookstore#readme"
+  "homepage": "https://github.com/collinsjumaz/bookstore#readme",
+  "dependencies": {
+    "express": "4.16.4"
+  }
 }
