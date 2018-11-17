@@ -1,9 +1,9 @@
-var express = require('express');
-var debug = require('debug')('app');
-var morgan = require('morgan');
-var path = require('path');
+const express = require('express');
+const debug = require('debug')('app');
+const morgan = require('morgan');
+const path = require('path');
 
-var app = express();
+const app = express();
 
 app.use(morgan('tiny'));
 app.use(express.static(path.join(__dirname, '/public/')));
