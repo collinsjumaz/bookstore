@@ -11,8 +11,11 @@ app.use('/css', express.static(path.join(__dirname, '/node_modules/bootstrap/dis
 app.use('/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')));
 app.use('/js', express.static(path.join(__dirname, '/node_modules/jquery/dist')));
 
-app.get('/', function(req, res){
-	res.sendFile(path.join(__dirname, '/views/index.html'));
+app.set('views', './src/views');
+app.set('view engine', 'ejs');
+
+app.get('/',(req, res) => {
+	res.render('index', { title:'Library'});
 	})
 app.listen(3000, function(){
 	debug('listening on port 3000');
