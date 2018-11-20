@@ -15,7 +15,13 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 app.get('/',(req, res) => {
-	res.render('index', { title:'Library'});
+	res.render('index', 
+	{ 
+		title:'Library',
+		nav: [{ link: '/books, title: 'books' },
+		 {link: '/authors, title: 'authors'}]
+	}
+		);
 	})
 app.listen(3000, function(){
 	debug('listening on port 3000');
